@@ -178,12 +178,12 @@ a:active {
  * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
  */
 h1 {
-  font-size: 2em;
+  font-size: 40px;
   margin: 0.67em 0;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 35px;
   margin: 0.83em 0;
 }
 
@@ -531,17 +531,12 @@ table {
 body {
   padding: 0px 0 20px 0px;
   margin: 0px;
-  font: 14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #f0e7d5;
+  font: 14px/1.5 "courier", "monospace";
+  color: white;
   font-weight: normal;
-  background: #252525;
-  background-attachment: fixed !important;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2a2a29), color-stop(100%, #1c1c1c));
-  background: -webkit-linear-gradient(#2a2a29, #1c1c1c);
-  background: -moz-linear-gradient(#2a2a29, #1c1c1c);
-  background: -o-linear-gradient(#2a2a29, #1c1c1c);
-  background: -ms-linear-gradient(#2a2a29, #1c1c1c);
-  background: linear-gradient(#2a2a29, #1c1c1c);
+  background-image: url("../images/Butterlybackground.jpg");
+  background-size: 100%;
+ 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -564,7 +559,9 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 30px;
+  font-family: "courier", "monospace";
+
 }
 
 h4, h5, h6 {
@@ -574,18 +571,18 @@ h4, h5, h6 {
 h3 {
   font-size: 18px;
   line-height: 24px;
-  font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: 'courier', "monospace";
   font-weight: normal;
   color: #b6b6b6;
 }
 
 a {
-  color: #ffcc00;
+  color: #cccccc;
   font-weight: 400;
   text-decoration: none;
 }
 a:hover {
-  color: #ffeb9b;
+  color: red;
 }
 
 a small {
@@ -611,7 +608,7 @@ strong {
   padding: 0 20px;
 }
 
-section img {
+section img { 
   max-width: 100%;
 }
 
@@ -782,9 +779,10 @@ dt {
 
 section {
   max-width: 650px;
-  padding: 30px 0px 50px 0px;
+  padding: 30px 15px 50px 15px;
   margin: 20px 0;
   margin-top: 70px;
+  background-color: rgba(0,0,0,.5);
 }
 section #title {
   border: 0;
@@ -793,15 +791,15 @@ section #title {
   padding: 0 0 5px 0;
 }
 section #title h1 {
-  font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 40px;
+  font-family: 'Courier New', "monospace";
+  font-weight: lighter;
+  font-size: 50px;
   text-align: center;
-  line-height: 36px;
+  line-height: 20px;
 }
 section #title p {
   color: #d7cfbe;
-  font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Courier', "monospace", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 18px;
   text-align: center;
@@ -810,13 +808,13 @@ section #title .credits {
   font-size: 11px;
   font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  color: #696969;
+  color: #cccccc;
   margin-top: -10px;
 }
-section #title .credits.left {
+section #footer .creditsleft {
   float: left;
 }
-section #title .credits.right {
+section #footer .creditsright {
   float: right;
 }
 
