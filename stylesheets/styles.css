@@ -582,7 +582,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: red;
+  color: #610010;
 }
 
 a small {
@@ -776,12 +776,43 @@ dt {
   margin-right: 10px;
   font-size: 11px;
 }
+/* Navigation Bar From W3Schools*/
+ul {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #610010;
+    outline: #610010 dotted thin;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 35px;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #000;
+}
+.active {
+    background-color: #000000;
+}
+
+
 
 section {
   max-width: 650px;
-  padding: 30px 15px 50px 15px;
-  margin: 20px 0;
-  margin-top: 70px;
+  padding: 0px 15px 50px 15px;
+  margin: 0px 0;
+  margin-top: 0px;
   background-color: rgba(0,0,0,.5);
 }
 section #title {
