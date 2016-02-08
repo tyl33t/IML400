@@ -1,7 +1,7 @@
 /* ----- */
 // Replace YOUR NAME with yours
 
-var NAME = "YOUR NAME";
+var NAME = "TY LEET";
 console.log( "/*****************/\n" + NAME +"'s submission \nfor Whodat Assignment" + "\n/*****************/\n");
 
 
@@ -29,7 +29,18 @@ console.log( "/*****************/\n" + NAME +"'s submission \nfor Whodat Assignm
 console.log('...challenge 1...');
 
 //paste your code here...and delete
-console.log('\tnot completed')
+function colorStyle( elem, car) { 
+console.log('..styling color of elem = ' + elem);
+var myNewColorString = "background-color:" + car + ";";
+elem.setAttribute("style",myNewColorString);
+}
+
+wing_R = document.getElementsByClassName( "wing_R" )[0]
+colorStyle( wing_R, "red")
+
+wing_L = document.getElementsByClassName( "wing_L" )[0]
+colorStyle( wing_L, red)
+console.log('\tcompleted')
 
 /* -=-=-=-			=-=-=-=-=			-=-=-= 	*/
 /*  Ch2											*/	
@@ -37,7 +48,12 @@ console.log('\tnot completed')
 /*	on the 1st row at the end					*/	
 /* -=-=-=-			=-=-=-=-=			-=-=-= 	*/
 console.log('...challenge 2...');
-console.log('\tnot completed')
+
+cage_3 = document.getElementsByClassName("cage column-4")[2]
+
+colorStyle( cage_3, "black")
+
+console.log('\tcompleted')
 //paste your code here...
 
 
@@ -62,10 +78,17 @@ console.log('\tnot completed')
 /** ---		----	---	 **/
 
 console.log('...challenge 3...');
-console.log('\tnot completed')
+console.log('\tattempted')
 //paste your code here...
+function changeLength( elem, pixel) { 
+console.log('..styling beakLength of elem = ' + elem);
+var myNewBeakLength = "border-top:" + pixel + ";";
+elem.setAttribute("style",myNewBeakLength);
+}
 
+beak_6 = document.getElementsByClassName("beak")[5]
 
+changeLength( beak_6, "100px")
 
 /* -=-=-=-			=-=-=-=-=			-=-=-= 	*/
 /*  Ch4											*/	
@@ -80,17 +103,10 @@ console.log('\tnot completed')
 /*				html Tag for the first cage     */					
 /* -=-=-=-			=-=-=-=-=			-=-=-= 	*/
 console.log('...challenge 4...');
-console.log('\tnot completed')
+console.log('\tcompleted')
 function getCage(cageNumber) {
-	// Uncomment and fill in the code below
 
-	// Hint: 
-	// First get the cages
-	// Second, get the cage that corresponds to the cageNumber
-	// that was passed in
-	// Third, return that cage
-
-	// var selectedCage = 
+	var selectedCage = document.getElementsByClassName("cage")[cageNumber]
 
 	return selectedCage;
 }
@@ -112,11 +128,19 @@ function getCage(cageNumber) {
 console.log('...challenge 5...');
 console.log('\tnot completed')
 //paste your code here...
+function getCage(cageNumber) {
+	var selectedCage = document.getElementsByClassName("cage")[cageNumber]
+	return selectedCage;
+}
+colorStyle(getCage("1"), "red")
+colorStyle(getCage("4"), "red")
 
-
-
-
-
+function getBody(BodyNumber) {
+	var selectedBody = document.getElementsByClassName("body prpl-d4")[BodyNumber]
+	return selectedBody;
+}
+colorStyle(getBody("1"), "yellow")
+colorStyle(getBody("4"), "yellow")
 
 /* -=-=-=-			=-=-=-=-=			-=-=-= 	*/
 /*  Ch6											*/	
@@ -130,25 +154,32 @@ console.log('\tnot completed')
 console.log('...challenge 6...');
 console.log('\tnot completed')
 //paste your code here...
-
 function getWings(anOwl) {
-	return wings;
+	var wing1 = document.getElementsByClassName("wing_L")[anOwl]
+	var wing2 = document.getElementsByClassName("wing_R")[anOwl]
+	return [wing1, wing2];
 }
 
 function getBeak(anOwl) {
-	return wings;
+	var beak1 = document.getElementsByClassName("beak")[anOwl]
+	return beak1;
 }
 
 function getEyes(anOwl) {
-	return eyes;
+	var eye1 = document.getElementsByClassName("eye_L")[anOwl]
+	var eye2 = document.getElementsByClassName("eye_R")[anOwl]
+	return [eye1, eye2];
 }
 
 function getBody(anOwl) {
-	return body;
+	var selectedBody = document.getElementsByClassName("body prpl-d4")[anOwl]
+	return selectedBody;
 }
 
 function getPupils(anOwl) {
-
+	var pupil1 = document.getElementsByClassName("pupil")[anOwl*2]
+	var pupil2 = document.getElementsByClassName("pupil")[anOwl*2+1]
+	return [pupil1, pupil2];
 }
 
 
