@@ -39,7 +39,7 @@ wing_R = document.getElementsByClassName( "wing_R" )[0]
 colorStyle( wing_R, "red")
 
 wing_L = document.getElementsByClassName( "wing_L" )[0]
-colorStyle( wing_L, red)
+colorStyle( wing_L, "red")
 console.log('\tcompleted')
 
 /* -=-=-=-			=-=-=-=-=			-=-=-= 	*/
