@@ -126,7 +126,7 @@ function getCage(cageNumber) {
 /*	assist you 									*/
 /* -=-=-=-			=-=-=-=-=			-=-=-= 	*/
 console.log('...challenge 5...');
-console.log('\tnot completed')
+console.log('\tcompleted')
 //paste your code here...
 function getCage(cageNumber) {
 	var selectedCage = document.getElementsByClassName("cage")[cageNumber]
@@ -152,7 +152,7 @@ colorStyle(getBody("4"), "yellow")
 /*												*/	
 /* -=-=-=-			=-=-=-=-=			-=-=-= 	*/
 console.log('...challenge 6...');
-console.log('\tnot completed')
+console.log('\tcompleted')
 //paste your code here...
 function getWings(anOwl) {
 	var wing1 = document.getElementsByClassName("wing_L")[anOwl]
