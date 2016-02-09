@@ -88,7 +88,7 @@ elem.setAttribute("style",myNewBeakLength);
 
 beak_6 = document.getElementsByClassName("beak")[5]
 
-changeLength( beak_6, "100px")
+changeLength( beak_6, "100px solid magenta")
 
 /* -=-=-=-			=-=-=-=-=			-=-=-= 	*/
 /*  Ch4											*/	
