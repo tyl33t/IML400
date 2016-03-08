@@ -2,7 +2,7 @@ console.log("...javascript {main.js} loaded...");
 
 var result = null;
 var msg_results = "<p class='msg'>the results will be placed here</p>";
-var base_URL = "http://words.bighugelabs.com/api/2/fb07b071e2ebb35983a5131ce325af58/"
+var base_URL = "https://words.bighugelabs.com/api/2/fb07b071e2ebb35983a5131ce325af58/"
 
 
 function onClear() {
@@ -21,9 +21,9 @@ function onSubmit() {
     // the reason to do this is because of the next step where we call the
     // jQuery getJSON function.
     // See below for the explanation
-    var URL = 'http://words.bighugelabs.com/api/2/fb07b071e2ebb35983a5131ce325af58/' + query + '/json'
+    var URL = 'https://words.bighugelabs.com/api/2/fb07b071e2ebb35983a5131ce325af58/' + query + '/json'
     console.log( URL )
-    var result = $.getJSON('http://words.bighugelabs.com/api/2/fb07b071e2ebb35983a5131ce325af58/' + query + '/json').done( onJSONSuccess );
+    var result = $.getJSON('https://words.bighugelabs.com/api/2/fb07b071e2ebb35983a5131ce325af58/' + query + '/json').done( onJSONSuccess );
 
     console.log( result );
 
