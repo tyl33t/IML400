@@ -1,0 +1,12 @@
+body {
+	background-color: blue;
+	position: absolute;
+	margin: auto;
+	padding: 30px;
+}
+
+
+.header {
+	margin: auto;
+	padding: 30px;
+}

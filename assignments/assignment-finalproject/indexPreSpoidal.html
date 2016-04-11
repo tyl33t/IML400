@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Spoidal</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../../stylesheets/preSpoidalstyle.css"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script type="text/javascript">
+    // PASSWORD PROTECTION SCRIPT
+
+    function TheLogin() {
+
+        var password = '';
+
+        if (this.document.login.pass.value == password) {
+            top.location.href = "indexSpoidal.html";
+        } else {
+            window.alert("Incorrect password, please try again.");
+        }
+    }
+      </script>
+    <style>
+      body {
+        background-image: url("../../img/Cloudsbackground.jpg");
+        background-size: 2000px 1000px;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: auto;
+        padding: 30px;
+        height: 800px;
+      }
+
+
+      .header {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 30px;
+        position: relative;
+
+      }
+
+      .footer {
+        font-style: italic;
+        font-size: 60%;
+        text-align: center;
+        position: relative;
+        bottom: -230px;
+        margin-right: auto;
+        margin-left: auto;
+      
+      }
+
+      h3 {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        display: block;
+      }
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+  <div class="header">
+    <img src="../../img/Spoidalimage.png" width="800">
+
+  </div>
+
+  <div style="text-align: center; margin: 10px 0px 0px 0px; color: #000000; font: normal 13px arial, sans-serif;">
+    Enter Search Keyword<br>
+    <form name="login" style="margin: 5px 0px 0px 0px;">
+    <input type="text" name="pass" size="50" onkeydown="if(event.keyCode==13) event.keyCode=9;" style="width: 300px;"><br>
+    <input type="button" value="Let's go!" style="width: 150px; margin: 4px auto 4px auto;" onclick="javascript:TheLogin(this.form)">
+    </form>
+  </div>
+
+<div class="footer">
+ <h3>Project created by Ty Leet<h3>
+  <h3>University of Southern California IML 2016<h3>
+</div>
+
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
