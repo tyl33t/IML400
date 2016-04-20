@@ -7,21 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="../../stylesheets/preSpoidalstyle.css"></script>
     <script src="../../javascripts/instagram.js"></script>
+    <script src="../../javascripts/keyword.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <script type="text/javascript">
-    // PASSWORD PROTECTION SCRIPT
-
-    function TheLogin() {
-
-        var password = '';
-
-        if (this.document.login.pass.value == password) {
-            top.location.href = "indexSpoidal.html";
-        } else {
-            window.alert("Incorrect password, please try again.");
-        }
-    }
-      </script>
     <style>
       body {
         background-image: url("../../img/Cloudsbackground.jpg");
@@ -72,17 +59,31 @@
 
   </head>
   <body>
+  <script type="text/javascript">
+      // PASSWORD PROTECTION SCRIPT
+
+      function getQueryVariable() {
+
+          var keyword = this.document.login.pass.value;
+
+          if (this.document.login.pass.value == keyword) {
+              top.location.href = "getQueryVariable.html" + '?test=' + keyword;
+          } else {
+              window.alert("Incorrect password, please try again.");
+          }
+      }
+  </script>
 
   <div class="header">
     <img src="../../img/Spoidalimage.png" width="800">
 
   </div>
 
-  <div style="text-align: center; margin: 10px 0px 0px 0px; color: #000000; font: normal 13px arial, sans-serif;">
+  <div class="input" style="text-align: center; margin: 10px 0px 0px 0px; color: #000000; font: normal 13px arial, sans-serif;">
     Enter Search Keyword<br>
     <form name="login" style="margin: 5px 0px 0px 0px;">
     <input type="text" name="pass" size="50" onkeydown="if(event.keyCode==13) event.keyCode=9;" style="width: 300px;"><br>
-    <input type="button" value="Let's go!" style="width: 150px; margin: 4px auto 4px auto;" onclick="javascript:TheLogin(this.form)">
+    <input id="keyword" type="button" value="Let's go!" style="width: 150px; margin: 4px auto 4px auto;" onclick="javascript:getQueryVariable(this.form)">
     </form>
   </div>
 
