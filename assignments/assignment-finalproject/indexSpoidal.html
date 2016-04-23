@@ -68,7 +68,8 @@
 				// world
 				var s = 250;
 				var cube = new THREE.BoxGeometry( s, s, s );
-				var material = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0xffffff, shininess: 0 } );
+				var cubeTexture = new THREE.ImageUtils.loadTexture( '../../img/Cloudsbackground.jpg' );
+				var material = new THREE.MeshBasicMaterial( { map: cubeTexture } );
 				for ( var i = 0; i < 3000; i ++ ) {
 					var mesh = new THREE.Mesh( cube, material );
 					mesh.position.x = 8000 * ( 2.0 * Math.random() - 1.0 );
@@ -82,9 +83,9 @@
 					scene.add( mesh );
 				}
 				// lights
-				var dirLight = new THREE.DirectionalLight( 0xee3ee3, 0.05 );
+				var dirLight = new THREE.DirectionalLight( 0xee3ee3, 0.05, 0 );
 				dirLight.position.set( 0, -1, 0 ).normalize();
-				scene.add( new THREE.AmbientLight ( 0xcccccc ) );
+				scene.add( new THREE.AmbientLight ( 0xcccccc, 1, 1000 ) );
 				//light.position.set( 0, 500, 2000 );
 				//scene.add( light );
 				dirLight.color.setHSL( 1, 1, 1 );
