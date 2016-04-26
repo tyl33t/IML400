@@ -1,4 +1,25 @@
+    console.log('YOOOOOOO!')
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            if (decodeURIComponent(pair[0]) == variable) {
+                return decodeURIComponent(pair[1]);
+            }
+        }
+        console.log('Query variable %s not found', variable);
+    }
+    console.log('your variable was: ' + getQueryVariable('test') )
+    console.log('this is my url: ' + window.location)
+
+
+
+
+
+
 console.log("...flickr example...");
+
 
 
 // This is the base URL for the rhymebrain api
@@ -104,8 +125,9 @@ function formatQuery( ) {
     // word = <whatever the user entered that we passed to this function
   
 //     var request = { "function": "getRhymes"};    
-    var request = { "method" : "flickr.interestingness.getList",
+    var request = { "method" : "flickr.photos.search",
                     "api_key" : my_api_key,
+                    "tags" : getQueryVariable('test'),
                     "format" : "json",
                     "nojsoncallback" : 1 }
 //     the encodeURIComponent function will simply substitute URL escape codes into the string
@@ -207,7 +229,9 @@ function onJSONFail( error ) {
     console.log(error);
 }
 
+console.log("..window loading..")
 
+window.onload = onSubmit;
 
 /*
 

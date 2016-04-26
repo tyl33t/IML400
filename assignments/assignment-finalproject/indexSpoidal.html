@@ -28,7 +28,7 @@
 	<body>
 
 		<div class="info">
-			<a href="http://threejs.org" target="_blank">three.js</a> webgl - gpu picking
+			<p>Navigation: W A S D Camera: Arrow Keys  |   Or just use your mouse and click!</p>
 		</div>
 
 		<div id="container"></div>
@@ -68,7 +68,8 @@
 				// world
 				var s = 250;
 				var cube = new THREE.BoxGeometry( s, s, s );
-				var cubeTexture = new THREE.ImageUtils.loadTexture( '../../img/Cloudsbackground.jpg' );
+				THREE.ImageUtils.crossOrigin = '';
+				var cubeTexture = THREE.ImageUtils.loadTexture( 'https://www.petfinder.com/wp-content/uploads/2012/11/140272627-grooming-needs-senior-cat-632x475.jpg' );
 				var material = new THREE.MeshBasicMaterial( { map: cubeTexture } );
 				for ( var i = 0; i < 3000; i ++ ) {
 					var mesh = new THREE.Mesh( cube, material );
