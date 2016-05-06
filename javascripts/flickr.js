@@ -31,7 +31,7 @@ console.log("...flickr example...");
 
 //CONFIG DATA
 var RHYMEBRAIN_URL = "https://api.flickr.com/services/rest/";
-var my_api_key = "4e97b7f415495d88f1ad2f39fcbc0db4";
+var my_api_key = "db6a35c795bb709c46c7e9e6be4254f2";
 // var spotify_URL_BASE = "http ....... " + artistId + " rest of spotify shit"
 
 
@@ -40,6 +40,8 @@ var result = null;
 //----
 
 var msg_results = "<p class='msg'>the results will be placed here</p>";
+
+
 /**
  button handlers
 
@@ -150,7 +152,7 @@ function formatQuery( ) {
  * an argument
  */
 function onJSONSuccess( returnedData ) {
-    var i, obj, count = 20; // some variables that we will use in our loop of the results
+    var i, obj, count = 100; // some variables that we will use in our loop of the results
 //     result.photos.photo
 
     var photoData = returnedData.photos.photo;
@@ -162,7 +164,7 @@ function onJSONSuccess( returnedData ) {
     // be the number of data elements
     // this makes sure that we don't go over the number of results
     // that were returned
-    if( numOfPhotos < 20 ) {
+    if( numOfPhotos < 100 ) {
         count = numOfPhotos.length;
     }
     
@@ -183,7 +185,7 @@ function onJSONSuccess( returnedData ) {
         photo = photoData[i];
         var flickrImgUrl = formatUrl(photo); 
 
-        $aResult = $("<div class='photo'><h4>" + photo.title + "</h4> <img src='" + flickrImgUrl+ "'></img></div>");
+        $aResult = $("<div class='photo'>" + flickrImgUrl+ "</div>");
 
         //Now add the element that we just created to the end of the result div
         $("#results").append($aResult);
@@ -197,6 +199,8 @@ function onJSONSuccess( returnedData ) {
 //     returnedData.forEach()
     
 }
+
+var arr = []
 
 //take the flickr api documentation of how to create images from the photo data and build the URL for
 //the image
@@ -212,7 +216,7 @@ function formatUrl( photoData ) {
                          + photoData.secret
                          + ".jpg";
 
-   console.log("myphoto Url: " + result);
+   arr.push(result);
     
    return "https://farm" + photoData.farm
                          + ".staticflickr.com/" 
@@ -224,6 +228,7 @@ function formatUrl( photoData ) {
   
 }
 
+
 function onJSONFail( error ) {
     console.log("there was a problem: " );
     console.log(error);
@@ -232,6 +237,7 @@ function onJSONFail( error ) {
 console.log("..window loading..")
 
 window.onload = onSubmit;
+
 
 /*
 
