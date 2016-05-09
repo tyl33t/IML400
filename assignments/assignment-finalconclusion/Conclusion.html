@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Iml400 by tyl33t</title>
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../../javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <ul>
+              <li><a href="../../index2.html">About Me</a></li>
+              <li><a href="../../assignmentsIndex.html">Projects</a></li>
+              <li><a href="../../ReadingsIndex.html">Readings</a></li>
+              <li><a href="../../index2.html" download>Download</a></li>
+          </ul>
+          <br>
+          <br>
+          <br>
+          <h1>Project Proposal</h1>
+          <br>
+          
+        </div>
+
+        
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a></h2>
+
+<h3>Final Project Conclusion</h3>
+<br>
+<br>
+<p>When I set out to create my final project, a floating arena of cubes with different pictures on their faces, I knew it was going to be difficult. And yet, at the same time I didn't know how difficult, but achievable, it would be. With the month that I spent on this project, I probably worked for over 40 hours, whether I knew what I was doing, or just staring at the screen hoping that I could think of a solution to the problem at hand. With a project as big, and one I'm proud of, as this, I feel an evaluation of how I did is important. 
+</p>
+<br>
+<br>
+<p>Firstly, the compromises I had to make. My original plan was to make a more personal experience, using photographs that the user had uploaded themselves, taking the form of memory capsules that they could literally fly back in time with. Due to some API troubles, and a slightly confusing authentication process that I wish I had more time to dive into, I had to resort to a photo database that I knew worked, and could save me some time so that I could spend more of it figuring out how to put all of the pieces together. My design also changed, from a very rigid array of cubes into a more free form, randomly placed assortment. This was done for a few reasons, firstly, it was much easier to let the three.js randomize itself, and also when I tried to create my rigid box of cubes, the flying experience was not as open, not as free. I also had to abandon the idea of different photos on each face of the cube, as the way in which I randomized the photos could not be assigned to each face without assigning each individual cube a name, or variable, in order to call out the cube faces and their position. Unfortunately, I did not have the time to work with this. 
+</p>
+<br>
+<br>
+Despite my few compromises, I am very happy of this project. I worked for hours and hours trying to solve various problems. One of which was how to even get back an array of URL's that the three.js could use. Through endless variable naming, and learning how to push data to variables, I was succesful. The problem that took me the longest was probably figuring out how to transfer a global variable of my array to the three.js, as nothing was working. Even when I had an html page in between the submit page and the cube page it could not help me transfer my variable to different documents. So I tried putting all of the code into one html page, adding inline javascript for both the flickr api recieving, and the three.js cube rendering code. This also did not work, which confused me quite a bit as I thought for sure it would work. To debug, I tried calling the variable in the console when everything was loaded. I was given back my array of URL's. I then tried to have the console print my array within the code itself, with console.log, but when the page loaded, it was undefined. I spent hours researching why this might be, and why my global variable was full after the page loaded, but empty during the process. I finally had an idea that maybe it was due to timing. Perhaps the array was loading too slow due to the flickr api needing to retrieve the URL's first, and the three.js loaded too fast for that to be processed. So I played around with delaying of functions, and voila it worked. However, then for some reason I had two canvases: One that was dead, and then you had to zoom out of the page in order to see the second one, fully working, below it. To be honest, in order to get rid of the dead space I just happened to delete two lines of code that magically worked, and I only have a hunch as to explain why. 
+<br>
+After that I just had to copy and paste two thousand lines of code in order to create enough cubes to make it seem full enough. I was so happy that everything worked, I nearly cried. 
+<br>
+I guess the thing I've learned the most through this project is that you just need to spend time on it. I told my friends that whenever I got into a problem, I didn't think I could solve it because it was like "trying to speak a new language, where you know what you want to say but you don't know how to say it. And when you check the internet, no one has really said what you want to say before". But through time, and persevering, I was succesful. 
+
+<br>
+<br>
+
+
+<div class="footer">
+<span class="creditsleft">Project maintained by <a href="https://github.com/tyl33t">tyl33t</a></span>
+<br>
+          <span class="creditsright">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+</div>
+
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
